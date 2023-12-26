@@ -1,0 +1,247 @@
+from datetime import date, timedelta
+import csv
+
+fileName    = 'DataBase.csv'
+voidFill    = '__________'
+nonVoidFill = 'xxxxxxxxxx'
+
+def get_file():
+    '''this function open our DataBase.csv file into a nested array'''
+    with open(fileName, 'r') as db:
+        db_read = csv.reader(db)
+        db_read = list(db_read)
+
+        #remove all the empty list form the db_read
+        while [] in db_read:
+            db_read.remove([])
+        
+        # my_db = [row[0].split('\t') for row in db_read]
+        my_db = db_read
+    return my_db
+
+def fill_file(new_db):
+    with open(fileName, 'w') as db:
+        wrt = csv.writer(db)
+        wrt.writerows(new_db)
+
+def read_block(row, column):
+    '''this function write on a perticular block of a csv file. parameter row_value, col_value'''
+
+    my_db = get_file()
+
+    #finding column number
+    col_num = None
+    i = 0
+    for word in my_db[0]:
+        if word == column:
+            col_num = i
+            break
+        i += 1
+    
+    #finding row number
+    row_num = None
+    i = 0
+    for line in my_db:
+        if row == line[0]:
+            row_num = i
+            break
+        i += 1
+    
+    #now finally get the data
+    try:
+        result = my_db[row_num][col_num]
+    except TypeError:
+        result = '❌❌❌row/column not matched❌❌❌'
+
+    return result
+
+def wrt_block(row, column, data):
+    '''this function write on a perticular block of a csv file. parameter row_value, col_value'''
+
+    my_db = get_file()
+
+    #finding column number
+    col_num = None
+    i = 0
+    for word in my_db[0]:
+        if word == column:
+            col_num = i
+            break
+        i += 1
+    
+    #finding row number
+    row_num = None
+    i = 0
+    for line in my_db:
+        if row == line[0]:
+            row_num = i
+            break
+        i += 1
+    
+    #now finally get the data
+    try:
+        my_db[row_num][col_num] = data
+        print('data added')
+    except IndexError:
+        print('❌❌❌row/column not matched❌❌❌')
+
+    fill_file(my_db)
+
+    return None
+
+def fill_date_n(n=1):
+    '''this function fill the n dates entry of how row'''
+    db_data = get_file()
+    y, m, d = tuple(map(int, db_data[0][-1].split('-')))
+    last_date = date(y,m,d) #get the last date of file
+    add_data = []
+    for i in range(1, n+1):
+        new_d = str(last_date + timedelta(days=i))
+        for i in range(len(db_data)):
+            if i == 0:
+                db_data[i].append(new_d)
+            else:
+                db_data[i].append(voidFill)
+
+    fill_file(db_data)
+    
+    return None
+
+def add_topic(topic):
+    ''' this function add a topic in your file new home row'''
+    db_data = get_file()
+    db_data.append([topic]+[nonVoidFill]+[voidFill]*(len(db_data[0])-2))
+
+    fill_file(db_data)
+    return None
+
+def dlt_topic(topic):
+    '''this function deletes the given topic from the database'''
+    db_data = get_file()
+    for row in db_data:
+        if row[0] == topic:
+            db_data.remove(row)
+    
+    fill_file(db_data)
+
+    return None
+
+def today_revision():
+    '''this function gives list of all the topics of current day revision'''
+    today_topics = list()
+
+    column_read = str(date.today()) #we have to check todays day column only
+    row_read = None
+
+    db_data = get_file() #this is our file data 
+
+    for row in db_data: #we need to check all column of todays date
+        block = read_block(row[0], column_read)
+        if block == nonVoidFill:
+            today_topics.append(row[0])
+        
+    return today_topics
+
+def topic_score(topic, score):
+    '''this function set the next revision day according to the given parameter score'''
+    score_guide = {
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10
+    }
+
+    row_write = topic
+    column_write = str(date.today()+timedelta( days=score_guide[score]) )
+
+    wrt_block(row_write, column_write, nonVoidFill)
+
+def pre_revision():
+    topics = today_revision()
+    close_pre_revision = True
+
+    while close_pre_revision:
+
+        if len(topics) == 0:
+            print('you have noting to revise now :) ')
+            break
+        
+        for i in range(len(topics)):
+            print(f" {i} --> {topics[i]} ")
+        slt_topic = int(input('please select one topic from the above given list : '))
+        print(f'you selected the topic {topics[slt_topic]}')
+        slt_score = int(input(' what was score from previous revision (1-10) :  '))
+        topic_score(topics[slt_topic], slt_score)
+        topics.pop(slt_topic)
+        print('**************** done!********************** )')
+
+        while True:
+            ask = input('do you want to fill more y/n : ')
+            if ask == 'y':
+                break
+            elif ask == 'n':
+                close_pre_revision = False
+                break
+            else :
+                print('please type only y or n')
+
+def initialise():
+    try :
+        with open("DataBase.csv", 'r'):
+            pass
+    except FileNotFoundError:
+        with open('DataBase.csv', 'w') as db:
+            wrt_obj = csv.writer(db)
+            wrt_obj.writerow(['HOME', str(date.today())])
+        fill_date_n(30)
+        print('DateBase created successfully :)')
+
+initialise()
+
+welcome = '''
+________________________________________________________________
+_________welcome to the Revision management system______________
+________________________________________________________________
+__________________INFO__________________________________________
+press
+tl ---> to get todays topics 
+pr ---> to fill the data of revision topic
+at -->  add topic
+del --> delete topic
+x ----> close()
+'''
+
+close = False
+while not close :
+    print(welcome)
+    resp = input('give your response : ')
+    if resp == 'tl':
+        print(" today's revision topics are : ")
+        for topic in today_revision():
+            print(topic)
+        input('') #just to hold for a moment
+    elif resp == 'pr':
+        pre_revision()
+    elif resp == 'at':
+        topic_add = input('write the topic you want to add : ')
+        add_topic(topic_add)
+        print("topic added successfully")
+    elif resp == 'del':
+        db_data = get_file()
+        for i in range(len(db_data)):
+            print(f" {i} --> {db_data[i][0]} ")
+        topic_del = int(input('select the topic you want to delete : '))
+        dlt_topic(db_data[i][0])
+        print('topic deleted successfully')
+
+
+    elif resp == 'x':
+        close = True
+    else:
+        print('please select a valid option :(')

