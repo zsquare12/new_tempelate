@@ -20,6 +20,14 @@ body {
     overflow: hidden;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .navbar_container {
+        height: 100px;
+        flex-direction: column;
+    }
+}
+
 .navbar_container ul {
     list-style-type: none;
     display: flex;
