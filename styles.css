@@ -42,6 +42,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 30px;
+    transition: 1s;
 }
 
 .nav_right a:hover {
@@ -158,7 +159,7 @@ main {
     box-shadow: 20px 20px 200px black, 0 0 50px black;
     /* width: 309px;
     height: 515px; */
-    /* transform: scale(1.1); */
+    transform: scale(1.05);
     /* cursor: pointer; */
 
     /* Add box shadow on hover */
