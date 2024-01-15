@@ -74,6 +74,16 @@ body {
 	color: red;
 }
 
+@keyframes example {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 .banner {
 	width: 100%;
 	/* border: thin solid red; */
@@ -110,6 +120,9 @@ body {
 .banner2>img {
 	height: 400px;
 	/* box-shadow: 0 0 20px white; */
+	opacity: 0;
+	animation: example 1s linear 2s 1;
+	animation-fill-mode: forwards;
 }
 
 .banner_texts>div {
@@ -120,6 +133,9 @@ body {
 	font-size: 30px;
 	color: rgb(210, 103, 41);
 	text-shadow: 0 0 10px red;
+	opacity: 0;
+	animation: example 1s linear 3s 1;
+	animation-fill-mode: forwards;
 }
 
 .banner_text2 {
@@ -127,6 +143,9 @@ body {
 	text-transform: capitalize;
 	font-family: sans-serif;
 	letter-spacing: -3px;
+	opacity: 0;
+	animation: example 1s linear 4s 1;
+	animation-fill-mode: forwards;
 }
 
 .banner_text3 {
@@ -135,6 +154,9 @@ body {
 	text-transform: capitalize;
 	/* color: rgb(33, 231, 102); */
 	/* text-shadow: 0 0 10px green; */
+	opacity: 0;
+	animation: example 1s linear 5s 1;
+	animation-fill-mode: forwards;
 }
 
 .banner_text3>b {
@@ -146,6 +168,9 @@ body {
 .banner_text4 {
 	font-family: sans-serif;
 	max-width: 500px;
+	opacity: 0;
+	animation: example 0.5s linear 6s 1;
+	animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 768px) {
