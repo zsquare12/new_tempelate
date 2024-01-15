@@ -1,244 +1,294 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: #252020;
+	background-color: #252020;
+	margin-top: 50px;
 }
 
-
 .navbar_container {
-    background: #343a40 !important;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
+	background: #343a40 !important;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	max-width: 2600px;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	box-shadow: 0 0 10px white;
 }
 
 @media only screen and (max-width: 768px) {
 
-    .navbar_container {
-        height: 100px;
-        flex-direction: column;
-    }
+	.navbar_container {
+		height: 100px;
+		flex-direction: column;
+		position: relative;
+	}
+
+	body {
+		margin-top: 0px;
+	}
+}
+
+.branding>a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+.logo {
+	height: inherit;
 }
 
 .navbar_container ul {
-    list-style-type: none;
-    display: flex;
+	list-style-type: none;
+	display: flex;
 }
 
 .navbar_container ul li {
-    padding: 0 10px;
+	padding: 0 10px;
 }
 
 
 .navbar_container ul a {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    transition: 1s;
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	transition: 0.5s;
 }
 
-.nav_right a:hover {
-    color: red;
+.nav_right>li>a:hover {
+	color: red;
+}
+
+.banner {
+	width: 100%;
+	/* border: thin solid red; */
+	display: flex;
+	justify-content: center;
 }
 
 .banner_img {
-    width: 100%;
+	max-width: 2600px;
+
+	overflow: hidden;
+	border-radius: 20px;
 }
 
 main {
-    max-width: 1320px;
-    margin: auto;
+	max-width: 1320px;
+	margin: auto;
 }
 
 .certificates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	/* border: thin solid red; */
+	border-radius: 20px;
+	box-shadow: 0 0 20px black;
+	margin-top: 20px
 }
 
 .certificates>h1 {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: white;
-    margin: 10px;
-    font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: white;
+	margin: 10px;
+	font-size: 30px;
 }
 
 .certificates>p {
-    font-size: 20px;
-    margin: 10px;
+	font-size: 20px;
+	margin: 10px;
 }
 
 .certificates_container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .certificates_container>div {
-    background-color: grey;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0 0 30px black;
-    height: 210px;
-    width: 300px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    transition: 1s;
-    overflow: hidden;
+	background-color: grey;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 0 0 40px black, 0 0 10px white;
+	height: 210px;
+	width: 300px;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	transition: 1s;
+	overflow: hidden;
 
 }
 
 .certificates_container>div:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+	transform: scale(1.1);
+	cursor: pointer;
 }
 
 .certificate_img>img {
-    width: 100%;
+	width: 100%;
 }
 
-.projects_container {}
+.projects_container {
+	/* border: thin solid red; */
+	border-radius: 20px;
+	box-shadow: 0 0 20px black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 .projects_container>h1 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: white;
-    font-size: 30px;
-    padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
 }
 
 .projects_container>p {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	padding: 10px;
 }
 
 .projects {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 10px;
 }
 
 /* card css start from here */
 .card_container {
-    background-color: white;
-    width: 300px;
-    margin: 10px;
-    /*width height ration 3:5*/
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    /* border: thick solid black; */
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px black;
-    transition: 0.5s;
+	background-color: white;
+	width: 300px;
+	margin: 10px;
+	/*width height ration 3:5*/
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	/* border: thick solid black; */
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px black;
+	transition: 0.5s;
 }
 
 .card_container:hover {
-    box-shadow: 20px 20px 200px black, 0 0 50px black;
-    /* width: 309px;
+	box-shadow: 20px 20px 200px black, 0 0 50px black;
+	/* width: 309px;
     height: 515px; */
-    transform: scale(1.05);
-    /* cursor: pointer; */
+	transform: scale(1.05);
+	/* cursor: pointer; */
 
-    /* Add box shadow on hover */
+	/* Add box shadow on hover */
 }
 
 .card_img {
-    height: 200px;
+	height: 200px;
 }
 
 
 .card_body {
-    display: flex;
-    border: thin solid rgb(242, 255, 0);
-    padding: 10px;
-    height: 250px;
-    flex-direction: column;
-    justify-content: space-around;
+	display: flex;
+	border: thin solid rgb(242, 255, 0);
+	padding: 10px;
+	height: 250px;
+	flex-direction: column;
+	justify-content: space-around;
 
 }
 
 .card_body * {
-    text-align: center;
+	text-align: center;
 }
 
 .card_body h5 {
-    color: rgb(255, 107, 132);
-    font-size: 15px;
+	color: rgb(255, 107, 132);
+	font-size: 15px;
 }
 
 .card_body h1 {
-    font-family: fantasy;
-    letter-spacing: 4px;
+	font-family: fantasy;
+	letter-spacing: 4px;
 }
 
 .card_body p {
-    font-size: large;
+	font-size: large;
 }
 
 .card_footer {
-    background-color: greenyellow;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: 1s;
+	background-color: greenyellow;
+	height: 70px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: 1s;
 }
 
 .card_footer>a {
-    background-color: purple;
-    color: white;
-    box-shadow: 2px 2px 20px black;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 15px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+	background-color: purple;
+	color: white;
+	box-shadow: 2px 2px 20px black;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 15px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 
 .card_footer>a:hover {
-    background-color: rgb(99, 1, 99);
+	background-color: rgb(99, 1, 99);
 }
 
 .card_footer * {
-    text-align: center;
+	text-align: center;
 }
 
 .one h1 {
-    color: deeppink;
+	color: deeppink;
 }
 
 /* card css ends her */
 
 footer {
-    background-color: #343a40 !important;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
+	background-color: #343a40 !important;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	max-width: 2600px;
+	margin: auto;
 }
+
+/* _________ */
+/
