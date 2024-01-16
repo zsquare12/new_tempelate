@@ -198,6 +198,10 @@ body {
 		font-size: 40px;
 	}
 
+	.viddiv {
+		display: none;
+	}
+
 }
 
 main {
