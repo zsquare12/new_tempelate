@@ -51,6 +51,7 @@ body {
 
 .logo {
 	height: inherit;
+	color: purple;
 }
 
 .navbar_container ul {
