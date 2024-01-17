@@ -177,6 +177,7 @@ body {
 	/* animation: bounce 1s linear 2s infinite; */
 	/* animation-fill-mode: forwards; */
 	text-shadow: 0 0 20px white;
+	z-index: 2;
 }
 
 .ci1 {
