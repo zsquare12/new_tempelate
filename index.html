@@ -39,6 +39,11 @@
 					<source src="earth_video.mp4" type="video/mp4">
 				</video>
 			</div>
+			<!-- <div class="viddiv" style="opacity: 0.05;">
+				<video autoplay muted loop>
+					<source src="matrix.mp4" type="video/mp4">
+				</video>
+			</div> -->
 			<div class="banner2_img">
 				<div class="code_icons">
 					<!-- HTML Icon -->
@@ -59,7 +64,7 @@
 			<div class="banner_texts">
 				<div class="banner_text1">Hello, I'm</div>
 				<div class="banner_text2">Jitendra kumar yadav</div>
-				<div class="banner_text3">studying at <b>IET Lucknow</b></div>
+				<div class="banner_text3">studying at <b>IET Lucknow (CSE AI)</b></div>
 				<div class="banner_text4">a passionate coding enthusiast on an exciting journey of learning and
 					self-discovery. With an insatiable love
 					for unraveling the intricacies of programming, not just mastering the art of coding but also
@@ -75,19 +80,27 @@
 			<h1>Skills</h1>
 			<p>Some of my certificates in programming and and web development </p>
 			<div class="certificates_container">
-
-				<div class="certificate_img"><img src="js_sololearn.png" alt=""></div>
-				<div class="certificate_img"><img src="hackerrank_python_basic.png" alt="">
-				</div>
-				<div class="certificate_img"><img src="typingSpeed.png" alt=""></div>
-				<div class="certificate_img"><img src="html_sololearn.jpg" alt=""></div>
-				<div class="certificate_img"><img src="python_intermediate_sololearn.png" alt="">
-				</div>
+				<div class="certificate_img"><img src="hackerrank_python_basic.png" alt=""></div>
+				<div class="certificate_img"><img src="python_core_sololearn.png" alt=""></div>
+				<div class="certificate_img"><img src="python_intermediate_sololearn.png" alt=""></div>
 				<div class="certificate_img"><img src="DS_python_sololearn.png" alt=""></div>
 				<div class="certificate_img"><img src="python_for_beginners_sololearn.png" alt=""></div>
-				<div class="certificate_img"><img src="python_core_sololearn.png" alt="">
+				<div class="certificate_img"><img src="typingSpeed.png" alt=""></div>
+				<div class="certificate_img"><img src="html_sololearn.jpg" alt=""></div>
+				<div class="certificate_img"><img src="css_hackerrank.png" alt=""></div>
+				<div class="certificate_img"><img src="js_sololearn.png" alt=""></div>
+			</div>
+			<div class="view_certificate" id="view_certificate" onclick="close_view_certificate()">
+				<div>
+					<div class="certificate_header" id="certificate_header">
+						<div class="chtitle" id="chtitle">title</div>
+						<div class="chclose" id="chclose" onclick="close_view_certificate()"><i class="fa-solid fa-x"></i></div>
+					</div>
+					<div class="certificate_main">
+						<img src="" alt="certificate" id="certificate_main_img">
+					</div>
+					<div class="certificate_footer">footer</div>
 				</div>
-
 			</div>
 		</section>
 		<section class="projects_container">
@@ -164,6 +177,7 @@
 	<footer>
 		<div><i class="fa-regular fa-face-smile"></i>SmilePlease.life says ThankYou:)</div>
 	</footer>
+	<script src="scripts.js"></script>
 </body>
 
 </html>

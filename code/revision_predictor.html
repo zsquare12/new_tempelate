@@ -5,12 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Code</title>
+    <link rel="stylesheet" href="styles.css"> <!--my Css-->
+    <script src="https://kit.fontawesome.com/7d1113a0df.js" crossorigin="anonymous"></script> <!--for icons-->
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #5C5C5C;
+            color: #FFFFFF;
+        }
+
+        .iframe_container {
+            position: relative;
+            overflow: hidden;
+            border: thin solid red;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        .hide {
+            height: 60px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: rebeccapurple;
+            position: absolute;
+            bottom: 5px;
+            display: none;
+        }
+
+        .hide2 {
+            position: absolute;
+            background-color: #fff;
+            bottom: 11px;
+            left: 15px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            color: #373530;
+            font-family: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, Segoe UI;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+            font-size: 15px;
+            width: 160px;
+            /* opacity: 0.5; */
+            /* display: none; */
+        }
+
+        .hide2>i {
+            font-size: 30px;
+        }
+
+        .smileplease_hide {
+            position: absolute;
+            top: 8px;
+            background-color: white;
+            height: 35px;
+            width: 200px;
+            opacity: 0.1;
+        }
+
+        .smileplease_hide:hover {
+            background-color: black;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
 
-    <iframe src="revision.txt" width="100%" height="5000px"></iframe>
 
+    <div class="iframe_container">
+        <iframe src="https://projects.addpotion.com/revision-predictor"></iframe>
+
+        <div class="hide2">
+            <i class="fa-solid fa-pen-nib"></i>
+            logic by Jitendra
+        </div>
+        <a href="/">
+            <div class="smileplease_hide"></div>
+        </a>
+    </div>
+    <!-- <div class="hide">build with passionate</div> -->
+
+
+    <script>
+        potion = document.getElementsByClassName("potion-badge")[0];
+        potion.style.display = "none";
+    </script>
 </body>
 
 </html>
