@@ -18,21 +18,21 @@ body {
 	width: 100%;
 	height: 50px;
 	overflow: hidden;
-	max-width: 2600px;
+	/* max-width: 2600px; */
 	margin: auto;
 	position: fixed;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	border-radius: 10px;
-	box-shadow: 0 0 10px white;
+	/* border-radius: 10px; */
+	/* box-shadow: 0 0 10px white; */
 	z-index: 10;
 }
 
 @media only screen and (max-width: 768px) {
 
 	.navbar_container {
-		height: 100px;
+		/* height: 100px; */
 		flex-direction: column;
 		position: relative;
 	}
@@ -55,24 +55,24 @@ body {
 	color: purple;
 }
 
-.navbar_container ul {
+ul {
 	list-style-type: none;
 	display: flex;
 }
 
-.navbar_container ul li {
+ul li {
 	padding: 0 10px;
 }
 
 
-.navbar_container ul a {
+ul a {
 	color: white;
 	text-decoration: none;
 	font-size: 30px;
 	transition: 0.5s;
 }
 
-.nav_right>li>a:hover {
+li>a:hover {
 	color: red;
 }
 
@@ -134,22 +134,25 @@ body {
 }
 
 .banner2 {
-	max-width: 2000px;
+	/* max-width: 2000px; */
 	/* border: thin solid red; */
-	height: 500px;
-	margin: 10px auto;
-	padding: 10px;
-	border-radius: 20px;
+	/* height: 500px; */
+	padding-top: 100px;
+	padding-bottom: 100px;
+	/* height: 100vh; */
+	/* margin: 10px auto; */
+	/* padding: 10px; */
+	/* border-radius: 20px; */
 	/* box-shadow: 0 0 20px white; */
 	background-color: rgb(18, 18, 18);
 	overflow: hidden;
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	color: white;
-	z-index: -2;
+	/* z-index: -2; */
 }
 
 .viddiv {
@@ -228,7 +231,7 @@ body {
 }
 
 .banner_text1 {
-	font-size: 30px;
+	font-size: 20px;
 	color: rgb(210, 103, 41);
 	text-shadow: 0 0 10px red;
 	opacity: 0;
@@ -237,19 +240,19 @@ body {
 }
 
 .banner_text2 {
-	font-size: 60px;
+	font-size: 50px;
 	text-transform: capitalize;
 	font-family: sans-serif;
 	letter-spacing: -3px;
 	opacity: 0;
 	animation: example 1s linear 4s 1;
 	animation-fill-mode: forwards;
-	text-shadow: 0 0 10px white;
+	text-shadow: 0 0 5px white;
 }
 
 .banner_text3 {
 	font-size: 15px;
-	font-family: sans-serif;
+	font-family: 'Times New Roman', Times, serif;
 	text-transform: capitalize;
 	/* color: rgb(33, 231, 102); */
 	/* text-shadow: 0 0 10px green; */
@@ -272,11 +275,18 @@ body {
 	animation-fill-mode: forwards;
 }
 
+.account_icons {
+	opacity: 0;
+	animation: example 1s linear 7s 1;
+	animation-fill-mode: forwards;
+	width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
 
 	.banner2 {
 		flex-direction: column;
-		height: 95vh;
+		height: 110vh;
 	}
 
 	.banner_text2 {
@@ -290,11 +300,22 @@ body {
 }
 
 main {
-	max-width: 1320px;
+	/* max-width: 1320px; */
 	margin: auto;
 }
 
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .certificates {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	max-width: 1320px;
+	margin: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -302,8 +323,8 @@ main {
 	color: white;
 	/* border: thin solid red; */
 	border-radius: 20px;
-	box-shadow: 0 0 20px black;
-	margin-top: 20px
+	/* box-shadow: 0 0 20px black; */
+	margin-top: 20px;
 }
 
 .certificates>h1 {
@@ -329,7 +350,7 @@ main {
 	background-color: grey;
 	border: 1px solid black;
 	border-radius: 20px;
-	box-shadow: 0 0 40px black, 0 0 10px white;
+	/* box-shadow: 0 0 40px black, 0 0 10px white; */
 	height: 210px;
 	width: 300px;
 	margin: 10px;
@@ -353,10 +374,17 @@ main {
 
 .projects_container {
 	/* border: thin solid red; */
-	border-radius: 20px;
-	box-shadow: 0 0 20px black;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	/* border-radius: 20px; */
+	/* box-shadow: 0 0 20px black; */
+	padding-top: 100px;
+	padding-bottom: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #182431;
+	/* margin-top: 20px;
+	margin-bottom: 20px; */
 }
 
 .projects_container>h1 {
@@ -379,7 +407,7 @@ main {
 	background-color: rgba(128, 128, 128, 0.3);
 	height: 100vh;
 	width: 100%;
-	position:fixed;
+	position: fixed;
 	top: 0;
 	/* opacity: 0.3; */
 	z-index: 11;
@@ -410,6 +438,7 @@ main {
 	display: flex;
 	justify-content: center;
 }
+
 .certificates .view_certificate>div .certificate_header>.chclose {
 	height: 100%;
 	width: 40px;
@@ -420,6 +449,7 @@ main {
 	transition: 0.2s;
 	display: none;
 }
+
 .certificates .view_certificate>div .certificate_header>.chclose:hover {
 	cursor: pointer;
 	background-color: red;
@@ -441,6 +471,7 @@ main {
 	height: 50px;
 	display: none;
 }
+
 .projects {
 	margin: 0 auto;
 	display: flex;
@@ -460,6 +491,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 	overflow: hidden;
 	/* border: thick solid black; */
 	border-radius: 20px;
@@ -479,6 +511,7 @@ main {
 
 .card_img {
 	height: 200px;
+	width: 200px;
 }
 
 
@@ -517,6 +550,7 @@ main {
 	justify-content: space-around;
 	align-items: center;
 	transition: 1s;
+	width: 100%;
 }
 
 .card_footer>a {
@@ -553,7 +587,7 @@ footer {
 	align-items: center;
 	width: 100%;
 	height: 50px;
-	max-width: 2600px;
+	/* max-width: 2600px; */
 	margin: auto;
 }
 
