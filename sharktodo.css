@@ -1,0 +1,169 @@
+/* * {
+    border: thin solid red;
+} */
+main {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+section {
+    width: 100%;
+    padding: 100px 10px;
+}
+
+section>div {
+    max-width: 1500px;
+    padding: 10px;
+    /* border: thin solid black; */
+}
+
+
+
+
+
+
+
+
+
+section.shark_banner {
+    background-color: #F4B400;
+}
+
+div.shark_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.shark_banner .shark_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.shark_banner .shark_icon img {
+    height: 70px;
+}
+
+div.shark_banner .about {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+div.shark_banner .one {
+    font-size: 50px;
+}
+
+div.shark_banner .two {
+    font-size: 30px;
+}
+
+div.shark_banner .three {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+section.video {
+    background-color: #DB4437;
+    text-align: center;
+}
+
+section.video .title {
+    padding: 20px;
+}
+
+section.video .video_container {
+    background-color: gray;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+        /* 9/16 aspect ratio (16:9) */
+    border-radius: 10px;
+}
+
+section.video .video_container>iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+section.about {
+    background-color: #ffffff;
+}
+
+section.about p {
+    font-size: 30px;
+    padding: 30px;
+}
+
+
+
+
+
+
+section.skill {
+    background-color: #4285F4;
+    text-align: center;
+}
+
+div.skill {
+    width: 1000px;
+}
+
+section.skill .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 20px 200px; */
+}
+section.skill .container .skillicon {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.skill .container .title {
+    font-size: 30px;
+    text-align: center;
+}
+
+section.skill .container .body {
+    display: flex;
+}
+
+section.skill .container img {
+    width: 80px ;
+}
+
+
+
+
+section.thankyou {
+    background-color: #F4B400;
+    padding: 200px 100px;
+}
+
+section.thankyou p {
+    font-size: 50px;
+    text-align: center;
+}
