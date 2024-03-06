@@ -134,18 +134,13 @@ section.about p {
 section.skill {
     background-color: #4285F4;
     text-align: center;
+    margin: auto;
 }
 
 div.skill {
     width: 1000px;
 }
 
-section.skill .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    /* padding: 20px 200px; */
-}
 section.skill .container .skillicon {
     padding: 50px 100px;
     display: flex;
@@ -153,9 +148,11 @@ section.skill .container .skillicon {
     align-items: center;
 }
 
-section.skill .container .title {
+section.skill div.skill>.title {
     font-size: 30px;
     text-align: center;
+    text-decoration: underline;
+    padding: 50px;
 }
 
 section.skill .container .body {
