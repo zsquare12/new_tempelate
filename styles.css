@@ -166,6 +166,12 @@ li>a:hover {
 	width: 100%;
 }
 
+
+
+
+
+
+
 .banner2_img {
 	/* border: thin solid red; */
 	display: flex;
@@ -300,6 +306,11 @@ li>a:hover {
 
 }
 
+
+
+
+
+
 main {
 	/* max-width: 1320px; */
 	margin: auto;
@@ -311,6 +322,11 @@ section {
 	justify-content: center;
 	align-items: center;
 }
+
+
+
+
+
 
 .certificates {
 	padding-top: 100px;
@@ -339,6 +355,7 @@ section {
 .certificates>p {
 	font-size: 20px;
 	margin: 10px;
+	text-align: center;
 }
 
 .certificates_container {
@@ -372,6 +389,11 @@ section {
 .certificate_img>img {
 	width: 100%;
 }
+
+
+
+
+
 
 .projects_container {
 	/* border: thin solid red; */
@@ -473,6 +495,11 @@ section {
 	display: none;
 }
 
+
+
+
+
+
 .projects {
 	margin: 0 auto;
 	display: flex;
@@ -501,11 +528,12 @@ section {
 }
 
 .card_container:hover {
-	box-shadow: 20px 20px 200px black, 0 0 50px black;
+	/* box-shadow: 20px 20px 200px black, 0 0 50px black; */
 	/* width: 309px;
     height: 515px; */
-	transform: scale(1.05);
+	/* transform: scale(1.05); */
 	/* cursor: pointer; */
+	outline: thick solid black;
 
 	/* Add box shadow on hover */
 }
@@ -518,7 +546,7 @@ section {
 
 .card_body {
 	display: flex;
-	border: thin solid rgb(242, 255, 0);
+	/* border: thin solid rgb(242, 255, 0); */
 	padding: 10px;
 	height: 250px;
 	flex-direction: column;
@@ -536,7 +564,8 @@ section {
 }
 
 .card_body h1 {
-	font-family: fantasy;
+	/* font-family: fantasy; */
+	font-weight: 100px;
 	letter-spacing: 4px;
 }
 
@@ -558,12 +587,14 @@ section {
 	background-color: purple;
 	color: white;
 	box-shadow: 2px 2px 20px black;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	text-decoration: none;
 	font-size: 20px;
 	padding: 15px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
+	height: 100%;
+	width: 100%;
 }
 
 .card_footer>a:hover {
@@ -578,6 +609,11 @@ section {
 	color: deeppink;
 }
 
+
+
+
+
+
 /* card css ends her */
 
 footer {
@@ -590,6 +626,20 @@ footer {
 	height: 50px;
 	/* max-width: 2600px; */
 	margin: auto;
+	padding: 50px;
 }
 
+footer .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .container>img {
+	width: 50px;
+}
+footer .container>p {
+	font-size: 30px;
+	padding: 10px;
+}
 /* _________ */

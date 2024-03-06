@@ -51,6 +51,7 @@ div.shark_banner .about {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     text-align: center;
 }
 
@@ -64,8 +65,18 @@ div.shark_banner .two {
 
 div.shark_banner .three {
     font-size: 20px;
+    border: thin solid green;
+    background-color: green;
+    width: 300px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
 }
 
+div.shark_banner .three:hover{
+    background-color: rgb(93, 140, 22);
+}
 
 
 
