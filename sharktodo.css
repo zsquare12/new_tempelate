@@ -47,7 +47,7 @@ div.shark_banner .shark_icon img {
 }
 
 div.shark_banner .about {
-    height: 300px;
+    /* height: 300px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -137,9 +137,9 @@ section.skill {
     margin: auto;
 }
 
-div.skill {
-    width: 1000px;
-}
+/* div.skill {
+    /* width: 1000px; */
+} */
 
 section.skill .container .skillicon {
     padding: 50px 100px;
