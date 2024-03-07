@@ -40,6 +40,8 @@ div.shark_banner .shark_icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 div.shark_banner .shark_icon img {
@@ -61,6 +63,8 @@ div.shark_banner .one {
 
 div.shark_banner .two {
     font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 div.shark_banner .three {
@@ -72,9 +76,10 @@ div.shark_banner .three {
     text-decoration: none;
     padding: 5px;
     color: black;
+    margin-top: 20px;
 }
 
-div.shark_banner .three:hover{
+div.shark_banner .three:hover {
     background-color: rgb(93, 140, 22);
 }
 
@@ -101,7 +106,7 @@ section.video .video_container {
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
-        /* 9/16 aspect ratio (16:9) */
+    /* 9/16 aspect ratio (16:9) */
     border-radius: 10px;
 }
 
@@ -137,11 +142,8 @@ section.skill {
     margin: auto;
 }
 
-/* div.skill {
-    /* width: 1000px; */
-} */
 
-section.skill .container .skillicon {
+*/ section.skill .container .skillicon {
     padding: 50px 100px;
     display: flex;
     flex-direction: column;
@@ -160,7 +162,7 @@ section.skill .container .body {
 }
 
 section.skill .container img {
-    width: 80px ;
+    width: 80px;
 }
 
 
